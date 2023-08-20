@@ -6,7 +6,7 @@ public class ConfigUi : MonoBehaviour
 {
     public bool open = true;
 
-    private Rect winRect = new(20, 20, 275, 600);
+    private Rect winRect = new(20, 20, 275, 660);
 
     public void OnGUI()
     {
@@ -16,11 +16,26 @@ public class ConfigUi : MonoBehaviour
         }
     }
 
+    private float highestSpeed = 0f;
+
     private void WinProc(int id)
     {
         var ox = 15f;
         var oy = 30f;
         var mx = winRect.width - 30;
+
+        {
+            var spd = Tools.Instance.GetPlayerSpeed();
+            if (spd > highestSpeed) highestSpeed = spd;
+
+            GUI.Label(new(ox, oy, mx, 20), $"Speed: {spd:F}");
+            oy += 20 + 5;
+
+            GUI.Label(new(ox, oy, mx, 20), $"Highest: {highestSpeed:F}");
+            oy += 20 + 5;
+        }
+
+        oy += 10;
         
         {
             var fps = Tools.Instance.FpsLimit;

@@ -140,6 +140,13 @@ public class Tools : MonoBehaviour
         return progress.reputation;
     }
     
+    public float GetPlayerSpeed()
+    {
+        if (!coreHasBeenSetup) return 0f;
+        var player = world.GetCurrentPlayer();
+        return player.GetTotalSpeed();
+    }
+
     public Stage GetCurrentStage()
     {
         if (!coreHasBeenSetup) return Stage.NONE;

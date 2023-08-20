@@ -10,6 +10,7 @@ A speedrun helper mod for Bomb Rush Cyberfunk.
 
 - FPS Counter and Limiter (30, 60, Uncapped)
 - REP Counter. Shows current REP and challenge requirement (or the stage maximum if no active challenge)
+- Speedometer (current, highest)
 - Stage Selector (allows any playable stage to be selected; does not reset progress)
 - Wanted Status Remover
 - Invulnerability
