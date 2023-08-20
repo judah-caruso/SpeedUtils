@@ -21,8 +21,8 @@ A speedrun helper mod for Bomb Rush Cyberfunk.
 
 ## Installation
 
-- Download [BepInEx 5.4.21](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21) and extract it to your BRCF install directory. 
-- Download `JudahsSpeedUtils.dll` from [GitHub](https://github.com/judah-caruso/SpeedUtils/releases) and place it into `[BRCF Install Dir]\BepInEx\plugins` (create the `plugins` folder if it doesn't already exist)
+- Download [BepInEx 5.4.21](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21) and extract it to your BRCF install directory. Open Bomb Rush Cyberfunk so BepInEx can set things up. 
+- Download `JudahsSpeedUtils.dll` from [GitHub](https://github.com/judah-caruso/SpeedUtils/releases) and place it into `[BRCF Install Dir]\BepInEx\plugins` 
 - Press `'` (single quote) in-game to toggle the menu
 
 ## Building from source
