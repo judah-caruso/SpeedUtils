@@ -245,5 +245,12 @@ public class Tools : MonoBehaviour
         
         Debug.Log($"Teleporting to {pos.x}, {pos.y}, {pos.z}");
         world.PlaceCurrentPlayerAt(pos, rot, true);
-    } 
+    }
+
+    public void RefilPlayerBoost()
+    {
+        var player = world.GetCurrentPlayer();
+
+        player.AddBoostCharge(999);
+    }
 }

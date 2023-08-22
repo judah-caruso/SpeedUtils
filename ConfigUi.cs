@@ -6,7 +6,7 @@ public class ConfigUi : MonoBehaviour
 {
     public bool open = true;
 
-    private Rect winRect = new(20, 20, 275, 660);
+    private Rect winRect = new(20, 20, 275, 695);
 
     public void OnGUI()
     {
@@ -137,6 +137,13 @@ public class ConfigUi : MonoBehaviour
             }
 
             oy += 30 + 5;
+
+            if (GUI.Button(new(ox, oy, mx, 30), "Refil Boost (R)"))
+            {
+                Tools.Instance.RefilPlayerBoost();
+            }
+
+            oy += 30 + 5;
         }
 
         oy += 10;
@@ -181,5 +188,6 @@ public class ConfigUi : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I)) Tools.Instance.Invulnerable = !Tools.Instance.Invulnerable;
         if (Input.GetKeyDown(KeyCode.H)) Tools.Instance.SavePlayerPosition();
         if (Input.GetKeyDown(KeyCode.J)) Tools.Instance.ResetPlayerPosition();
+        if (Input.GetKeyDown(KeyCode.R)) Tools.Instance.RefilPlayerBoost();
     }
 }
