@@ -249,6 +249,8 @@ public class Tools : MonoBehaviour
 
     public void RefilPlayerBoost()
     {
+        if (!coreHasBeenSetup) return;
+
         var player = world.GetCurrentPlayer();
 
         player.AddBoostCharge(999);
