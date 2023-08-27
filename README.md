@@ -2,7 +2,7 @@
 
 A speedrun helper mod for Bomb Rush Cyberfunk.
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
 
 ## Features
 
