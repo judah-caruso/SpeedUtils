@@ -2,22 +2,14 @@
 
 A speedrun helper mod for Bomb Rush Cyberfunk.
 
-![Screenshot](screenshot.jpg)
+![Screenshot](Screenshot.png)
 
 ## Features
 
-#### Version 0.0.1
+#### Version 0.0.3
 
-- FPS Counter and Limiter (30, 60, Uncapped)
-- REP Counter. Shows current REP and challenge requirement (or the stage maximum if no active challenge)
-- Speedometer (current, highest)
-- Stage Selector (allows any playable stage to be selected; does not reset progress)
-- Wanted Status Remover
-- Invulnerability
-- Position Saving and Teleporting
-- Character Swapper
-- Move Style Swapper
-- Outfit Swapper
+- Ability to view triggers
+- Ability to see what some triggers will do
 
 ## Installation
 
@@ -29,5 +21,7 @@ A speedrun helper mod for Bomb Rush Cyberfunk.
 ## Building from source
 - Clone this repository
 - Copy `[BRCF Install Dir]\Bomb Rush Cyberfunk_Data\Managed\Assembly-CSharp.dll` to the root of the repository
+- Copy `[BRCF Install Dir]\Bomb Rush Cyberfunk_Data\Managed\Unity.TextMeshPro.dll` to the root of the repository
+- Copy `[BRCF Install Dir]\Bomb Rush Cyberfunk_Data\Managed\UnityEngine.UI.dll` to the root of the repository
 - Run `dotnet build`
 - Copy `bin\debug\net46\JudahsSpeedUtils.dll` to `[BRCF Install Dir]\BepInEx\plugins`
