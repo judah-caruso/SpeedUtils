@@ -6,7 +6,7 @@ namespace JudahsSpeedUtils
     {
         public bool open = true;
 
-        private Rect winRect = new(20, 20, 275, 695);
+        private Rect winRect = new(20, 20, 275, 725);
 
         public void OnGUI()
         {
@@ -246,6 +246,15 @@ namespace JudahsSpeedUtils
                 }
 
                 oy += 20 + 5;
+
+                {
+                    var showTriggers = TriggerTools.Instance.DisplayTriggerZones;
+
+                    if (GUI.Button(new(ox, oy, mx, smallButtonHeight), $"Display Triggers (.): {(showTriggers ? "<color=green>On</color>" : "<color=red>Off</color>")}"))
+                    {
+                        TriggerTools.Instance.DisplayTriggerZones = !TriggerTools.Instance.DisplayTriggerZones;
+                    }
+                }
             }
 
             GUI.DragWindow();
@@ -265,6 +274,7 @@ namespace JudahsSpeedUtils
             if (Input.GetKey(KeyCode.Minus)) Tools.Instance.DecreaseFlySpeed();
             if (Input.GetKey(KeyCode.Equals)) Tools.Instance.IncreaseFlySpeed();
             if (Input.GetKeyDown(KeyCode.Backslash)) Tools.Instance.FreezeHeight = !Tools.Instance.FreezeHeight;
+            if (Input.GetKeyDown(KeyCode.Period)) TriggerTools.Instance.DisplayTriggerZones = !TriggerTools.Instance.DisplayTriggerZones;
             if (Input.GetKeyDown(KeyCode.Alpha9)) Tools.Instance.DecreaseTimeScale();
             if (Input.GetKeyDown(KeyCode.Alpha0)) Tools.Instance.IncreaseTimeScale();
         }

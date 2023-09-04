@@ -1,11 +1,9 @@
 using System.Reflection;
 using Reptile;
-using Reptile.Phone;
 using UnityEngine;
 
 namespace JudahsSpeedUtils
 {
-
     public class Tools : MonoBehaviour
     {
         public static Tools Instance;
@@ -86,8 +84,8 @@ namespace JudahsSpeedUtils
                     //player.tf.position = new Vector3(player.tf.position.x, FlightHeight, player.tf.position.z);
 
                     Camera.main.farClipPlane = 20000f;
-                    
                 }
+
                 if (TimeMod > 2f)
                 {
                     TimeMod = 2f;
@@ -165,6 +163,7 @@ namespace JudahsSpeedUtils
             if (LimitFramerate)
             {
                 Application.targetFrameRate = FpsLimit;
+                
             }
             else
             {
